@@ -1,11 +1,12 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEvent, ChangeEventHandler } from 'react';
 
 import './earch-box.style.css';
 
 type SearchBoxProps = {
   className: string;
   placeholder?: string;
-  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+  func: ChangeEventHandler; // can use this or VV
+  onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void; 
 }
 
 const SearchBox = ({ 
